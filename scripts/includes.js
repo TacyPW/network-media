@@ -6,6 +6,6 @@ $("#navigation").load("includes/nav.html", function () {
     console.log("nav loaded");
 });
 
-$("#artistbio").load("includes/artistbio.html", function () {
+$("#info").load("includes/info.html", function () {
     console.log("artist bio loaded");
 });

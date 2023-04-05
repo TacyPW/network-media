@@ -10,12 +10,9 @@
 	<meta name="description" content="">
 		<!--other metas like "description" or "author" allows you to add further info to your page, the actual description goes in content-->
 
-    <!-- <link rel="stylesheet" href="tacy.css"> -->
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="land.css">
     <link rel="stylesheet" href="main.css">
-
-    <!-- <link rel="" href=""> -->
 
     <!-- <script src=""></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -25,31 +22,35 @@
 </head>
 
 <body>
-
-	<main>
+    <header>    <!-- use header for accessibility purposes -->
+        <nav id="navigation" class="island"></nav>
+    </header>
+    
+	<section>
 		<h1>Tacy's Network Media Homepage</h1>
 
 		<img class="thumb" src="assets/tacy.gif">
 
 		<h2>Description-Under Construction!</h2>
 
-		<p>Hello world, I'm Tacy this is my homepage for DESMA 161 Network Media. I'll use it to post the projects and weekly assignments I produce in the that class.</p>
+		<p>Hello world, I'm Tacy this is my homepage for DESMA 161
+             Network Media. I'll use it to post the projects and
+              weekly assignments I produce in the that class.</p>
 
 		<p>They'll be listed like this:</p>
 
 		<ul>
-		<li><a href="http://art.teleportacia.org/observation/vernacular/uc/">Weekly 2</a></li>
+		<li><a href="https://tacyprinswoodlief.com">Weekly 2</a></li>
 		<li><a href="/">Weekly 3</a></li>
 		<li><a href="">Etc..</a></li>
 		</ul>
-	</main>
+	</section>
 
-    <div id="navigation"></div>
-    <div id="artistbio"></div>
+    <footer>    
+        <div id="info" class="island"></div>
+    </footer>
 
     <script src="scripts/includes.js"></script>
     <script src="scripts/menus.js"></script>
 </body>
-
-
 </html>

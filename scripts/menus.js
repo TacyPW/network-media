@@ -11,16 +11,16 @@ function close_menu() {
     show_pers();
 }
 
-function open_artist() {
+function open_info() {
     close_menu();
-    document.getElementById("artist-open").style.display = "block";
-    document.getElementById("artist-closed").style.display = "none";
+    document.getElementById("info-open").style.display = "block";
+    document.getElementById("info-closed").style.display = "none";
     hide_pers();
 }
 
 function close_artist() {
-    document.getElementById("artist-closed").style.display = "block";
-    document.getElementById("artist-open").style.display = "none";
+    document.getElementById("info-closed").style.display = "block";
+    document.getElementById("info-open").style.display = "none";
     show_pers();
 }
 
