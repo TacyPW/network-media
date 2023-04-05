@@ -2,46 +2,53 @@
 <html lang="en">
 	<!--specifying lang helps search engines return language specific results-->
 <head>
-	<meta charset="utf-8"> 
-		<!--sets the character set to work with virtually all characters-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<!--makes compatible with very early versions of Internet Explorer-->
-    <meta name="viewport" content="width=device-width initial-scale=1">
-		<!--Some cellphones and tablets pretend to have a larger screen, messing with graphic design you might do to make your page look good on small screens, this gets thier actual screen size-->
-    
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tacy's Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
 	<meta name="description" content="">
 		<!--other metas like "description" or "author" allows you to add further info to your page, the actual description goes in content-->
+
+    <!-- <link rel="stylesheet" href="tacy.css"> -->
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="land.css">
     <link rel="stylesheet" href="main.css">
-    
-    <link rel="" href="">
-		<!-- for linking to an external file, like a font or a Stylesheet -->
-    
-	<script src=""></script>
-		<!-- for linking to an external script-->
-    
-	<title>Tacy Homepage</title>
-		<!-- Required! the page's title, does not appear on the page, but appears in tool bar, bookmarks, and is useful for SEO-->
-	
+
+    <!-- <link rel="" href=""> -->
+
+    <!-- <script src=""></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+
 </head>
 
 <body>
+
 	<main>
 		<h1>Tacy's Network Media Homepage</h1>
-		
+
 		<img class="thumb" src="assets/tacy.gif">
-		
+
 		<h2>Description-Under Construction!</h2>
-		
+
 		<p>Hello world, I'm Tacy this is my homepage for DESMA 161 Network Media. I'll use it to post the projects and weekly assignments I produce in the that class.</p>
-		
+
 		<p>They'll be listed like this:</p>
-		
+
 		<ul>
 		<li><a href="http://art.teleportacia.org/observation/vernacular/uc/">Weekly 2</a></li>
 		<li><a href="/">Weekly 3</a></li>
 		<li><a href="">Etc..</a></li>
 		</ul>
 	</main>
+
+    <div id="navigation"></div>
+    <div id="artistbio"></div>
+
+    <script src="scripts/includes.js"></script>
+    <script src="scripts/menus.js"></script>
 </body>
 
 
