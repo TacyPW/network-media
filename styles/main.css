@@ -1,56 +1,429 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
-
+/*#region imports */
+/*#endregion*/
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap");
+/*#region all applicable */
 body {
-    display: inline;
-    max-width: 600px;
-    background-color: azure;
-    font-family: 'EB Garamond', serif;
-        font-size: 2.5vw;
-
+  z-index: 1;
+  font-weight: normal;
 }
 
+.layer0 {
+  z-index: 2;
+}
+
+/*#region menus */
+.island, #info-closed {
+  /* position: absolute; */
+  display: block;
+  background-color: inherit;
+  transition: background-color 0.5s ease-in;
+  width: 10vw;
+  height: 10vw;
+  z-index: 1;
+  background-color: red;
+  position: fixed;
+}
+
+.closebtn {
+  display: block;
+  background-image: url(../assets/xmark.svg);
+  background-position: center center;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 5vw;
+  top: 5vw;
+  width: 4vw;
+  height: 4vw;
+}
+
+.openbtn {
+  background-image: url(../assets/lines.svg);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 6vw;
+  height: 6vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.infobtn {
+  background-image: url(../assets/person.svg);
+  top: 0%;
+  left: 40%;
+}
+
+.infoclose {
+  display: block;
+  position: fixed;
+  background-image: url(../assets/xmark.svg);
+  background-position: center center;
+  background-size: 100% 100%;
+  left: 5vw;
+  bottom: 5vw;
+  width: 4vw;
+  height: 4vw;
+}
+
+/*#region nav */
+#menu-closed {
+  display: block;
+  background-color: inherit;
+  transition: background-color 0.5s ease-in;
+  width: 10vw;
+  height: 10vw;
+  position: absolute;
+  left: 90vw;
+  top: 0;
+}
+
+#menu-closed:hover {
+  background-color: rgba(37, 37, 37, 0.891);
+  transition: background-color 0.5s ease-in;
+}
+
+#menu-open {
+  display: none;
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  left: 70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-x: hidden;
+}
+
+#menu-sections {
+  font-family: "Inconsolata", "Courier New", Courier, monospace;
+  font-size: 5vh;
+  margin-left: 3vw;
+  margin-top: 5vw;
+  line-height: 6vh;
+}
+
+#menu-sections:hover {
+  cursor: pointer;
+  color: lightgrey;
+}
+
+.menu-link:any-link { /* force link styles */
+  text-decoration: none !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+/*#endregion*/
+/*#region artist */
+#info-closed {
+  left: 0;
+  bottom: 0;
+}
+
+#info-closed:hover {
+  background-color: rgba(37, 37, 37, 0.891);
+  transition: background-color 0.5s ease-in;
+}
+
+#info-open {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-x: hidden;
+}
+
+.info-sections {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 80%;
+  height: 100%;
+  font-family: "Inconsolata", "Courier New", Courier, monospace;
+}
+
+.portrait {
+  grid-column: 1;
+  grid-row: 1/3;
+  width: auto;
+  background-image: url(../assets/tacy.png);
+  background-position: center center;
+  background-size: 70% auto;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.name {
+  grid-column: 2;
+  width: auto;
+  font-size: 4vh;
+  line-height: 5vh;
+  overflow-y: hidden;
+  padding-right: 6vw;
+}
+
+.name > h3 {
+  font-weight: normal;
+  line-height: 6vh;
+  font-size: 6vh;
+}
+
+.bio {
+  text-align: justify;
+  hyphens: auto;
+  grid-column: 2;
+  width: auto;
+  font-size: 4vh;
+  line-height: 5vh;
+  margin-right: 7vw;
+  overflow: auto;
+  grid-column: 2;
+}
+
+.bio > p {
+  margin-top: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.bio::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.bio {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.lead {
+  line-height: 0;
+}
+
+/*#endregion*/
+/*#endregion*/
+/* #region artist */
+/* #artist-closed {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.465);
+    transition: background-color .5s ease-in;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    left: 0%;
+    bottom: 100%;
+}
+#artist-closed:hover {
+    background-color: rgba(255, 255, 255, 0.891);
+    transition: background-color .5s ease-in;
+} */
+/*#endregion */
+/*#region homepage */
+.home {
+  width: 100%;
+  background-image: url(../assets/back.png);
+  background-size: 100vw;
+}
+
+.grid-container {
+  width: 100%;
+}
+
+#perspectives, perspectives:any-link {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  display: block;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title, title:any-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: none;
+}
+
+.letter, .letter:any-link {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  text-rendering: optimizeSpeed;
+  text-shadow: none;
+  font-weight: normal;
+  /* text-shadow: 0, 0, 20px ; */
+}
+
+.first {
+  font-family: "narnia";
+}
+
+.second {
+  font-family: "sage";
+}
+
+.third {
+  font-family: "tongva";
+}
+
+/*#endregion*/
+/*#region story journey */
+#story_container {
+  display: inline-block;
+  position: relative;
+  width: 75vw;
+  height: 70vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow-wrap: break-word;
+}
+
+#story_text {
+  font-size: 7vw;
+  line-height: 7vw;
+  font-weight: normal;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+/*#endregion*/
+/*#region type page */
+.narnia {
+  font-family: "narnia";
+}
+
+.sage {
+  font-family: "sage";
+}
+
+.tongva {
+  font-family: "tongva";
+}
+
+.fonts {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-kerning: 1vw;
+  font-weight: normal;
+}
+
+.typefaces {
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 16vh;
+}
+
+.typetester {
+  width: 85vw;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  resize: none;
+  border-color: lightgray;
+  border-style: dashed;
+  border-radius: 2vw;
+  border-bottom-left-radius: 10vw;
+  border-top-right-radius: 10vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  font-size: 8vw;
+  line-height: 8vw;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.typetester::-webkit-scrollbar {
+  display: none;
+}
+
+.typetester:focus, input:focus {
+  outline-color: grey;
+  outline-style: dashed;
+  outline: 1px;
+}
+
+/* .typ {
+
+} */
+#testnarnia {
+  font-family: "narnia";
+}
+
+#testsage {
+  font-family: "sage";
+}
+
+#testtongva {
+  font-family: "tongva";
+}
+
+/*#endregion*/
+/*#endregion*/
+body {
+  display: inline;
+  max-width: 600px;
+  background-color: azure;
+  font-family: "EB Garamond", serif;
+  font-size: 2.5vw;
+}
 
 main {
-    margin: 0;
-    background-color: lightgoldenrodyellow;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    padding: 2vw;
-}
-
-.thumb {
-    
-    margin: 0 10%;
-    width: 80%;
+  margin: 0;
+  background-color: lightgoldenrodyellow;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 2vw;
 }
 
 h1 {
-    color: goldenrod;
-    font-size: 4vw;
-    text-align: center;
+  color: goldenrod;
+  font-size: 4vw;
+  text-align: center;
 }
 
-        
 h2 {
-    color: blueviolet;
+  color: blueviolet;
 }
 
 ul {
-    border-width: 5px;
-    border-style: dotted;
-    border-color: orangered;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: orangered;
 }
-
 
 @media (min-width: 900px) {
-    main {
-        width: 40vw;
-    }
+  main {
+    width: 40vw;
+  }
 }
 @media (max-width: 899px) {
-    main {
-        width: 80vw;
-    }
+  main {
+    width: 80vw;
+  }
 }
+
+/*# sourceMappingURL=main.css.map */

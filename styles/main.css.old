@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+
+body {
+    display: inline;
+    max-width: 600px;
+    background-color: azure;
+    font-family: 'EB Garamond', serif;
+        font-size: 2.5vw;
+
+}
+
+
+main {
+    margin: 0;
+    background-color: lightgoldenrodyellow;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 2vw;
+}
+
+.thumb {
+    
+    margin: 0 10%;
+    width: 80%;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 4vw;
+    text-align: center;
+}
+
+        
+h2 {
+    color: blueviolet;
+}
+
+ul {
+    border-width: 5px;
+    border-style: dotted;
+    border-color: orangered;
+}
+
+
+@media (min-width: 900px) {
+    main {
+        width: 40vw;
+    }
+}
+@media (max-width: 899px) {
+    main {
+        width: 80vw;
+    }
+}
