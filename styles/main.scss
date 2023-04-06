@@ -11,8 +11,7 @@ body {
     max-width: 600px;
     background-color: azure;
     font-family: 'EB Garamond', serif;
-        font-size: 2.5vw;
-
+    font-size: 2.5vw;
 }
 
 
@@ -26,12 +25,6 @@ main {
     padding: 2vw;
 }
 
-.thumb {
-    
-    //margin: 0 10%;
-    //width: 80%;
-}
-
 h1 {
     color: goldenrod;
     font-size: 4vw;
@@ -43,11 +36,6 @@ h2 {
     color: blueviolet;
 }
 
-ul {
-    border-width: 5px;
-    border-style: dotted;
-    border-color: orangered;
-}
 
 
 @media (min-width: 900px) {

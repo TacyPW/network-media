@@ -12,16 +12,23 @@ body {
 }
 
 /*#region menus */
-.island, #info-closed {
+.island, #info-closed, #menu-closed {
   /* position: absolute; */
   display: block;
-  background-color: inherit;
+  background-color: red;
   transition: background-color 0.5s ease-in;
   width: 10vw;
   height: 10vw;
   z-index: 1;
-  background-color: red;
   position: fixed;
+}
+
+.overlay, #info-open, #menu-open {
+  display: block;
+  background-color: blue;
+  z-index: 1;
+  position: fixed;
+  overflow: hidden;
 }
 
 .closebtn {
@@ -73,30 +80,22 @@ body {
 /*#region nav */
 #menu-closed {
   display: block;
-  background-color: inherit;
-  transition: background-color 0.5s ease-in;
-  width: 10vw;
-  height: 10vw;
-  position: absolute;
   left: 90vw;
   top: 0;
 }
 
 #menu-closed:hover {
   background-color: rgba(37, 37, 37, 0.891);
-  transition: background-color 0.5s ease-in;
 }
 
 #menu-open {
   display: none;
-  position: absolute;
   width: 30%;
   height: 100%;
   left: 70%;
-  background-color: rgba(255, 255, 255, 0.9);
-  overflow-x: hidden;
 }
 
+/*#region inside nav */
 #menu-sections {
   font-family: "Inconsolata", "Courier New", Courier, monospace;
   font-size: 5vh;
@@ -105,18 +104,18 @@ body {
   line-height: 6vh;
 }
 
-#menu-sections:hover {
-  cursor: pointer;
-  color: lightgrey;
-}
-
 .menu-link:any-link { /* force link styles */
   text-decoration: none !important;
   color: rgb(0, 0, 0) !important;
 }
 
+.menu-link:any-link:hover { /* force link styles */
+  color: greenyellow !important;
+}
+
 /*#endregion*/
-/*#region artist */
+/*#endregion*/
+/*#region info */
 #info-closed {
   left: 0;
   bottom: 0;
@@ -129,12 +128,9 @@ body {
 
 #info-open {
   display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  overflow-x: hidden;
 }
 
 .info-sections {
@@ -407,12 +403,6 @@ h1 {
 
 h2 {
   color: blueviolet;
-}
-
-ul {
-  border-width: 5px;
-  border-style: dotted;
-  border-color: orangered;
 }
 
 @media (min-width: 900px) {
