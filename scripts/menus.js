@@ -1,5 +1,5 @@
 function open_menu() {
-    close_artist();
+    close_info();
     document.getElementById("menu-open").style.display = "block";
     document.getElementById("menu-closed").style.display = "none";
 
