@@ -26,6 +26,7 @@ body {
 .overlay, #info-open, #menu-open {
   display: block;
   background-color: blue;
+  opacity: 80%;
   z-index: 1;
   position: fixed;
   overflow: hidden;
@@ -131,9 +132,11 @@ body {
   width: 100vw;
   height: 100vh;
   left: 0;
+  top: 0;
 }
 
 .info-sections {
+  position: absolute;
   width: 90vw;
   margin-left: auto;
   margin-right: auto;
@@ -141,7 +144,6 @@ body {
   grid-template-columns: 50% 50%;
   grid-template-rows: 20% 80%;
   height: 100%;
-  font-family: "Inconsolata", "Courier New", Courier, monospace;
 }
 
 .portrait {
@@ -381,7 +383,7 @@ body {
   display: inline;
   max-width: 600px;
   background-color: azure;
-  font-family: "EB Garamond", serif;
+  font-family: "Inconsolata", "Courier New", Courier, monospace;
   font-size: 2.5vw;
 }
 
