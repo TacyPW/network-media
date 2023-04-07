@@ -7,27 +7,29 @@
 $fontstack: hella;
 
 body {
-    display: inline;
-    max-width: 600px;
+    //display: inline;
+    z-index: 1;
     background-color: azure;
     font-family: 'Inconsolata', 'Courier New', Courier, monospace;
-    font-size: 2.5vw;
+    font-size: 24px;
+
 }
 
+/*#region all applicable */
 
-main {
-    margin: 0;
-    background-color: lightgoldenrodyellow;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    padding: 2vw;
+.layer0 {
+    z-index: 2;
 }
+p {
+    font-size: 24px;
+}
+h1 {
+    font-size:36px;
+}
+
 
 h1 {
     color: goldenrod;
-    font-size: 4vw;
     text-align: center;
 }
 
@@ -36,15 +38,19 @@ h2 {
     color: blueviolet;
 }
 
+/*#region Breakpoints */
 
 
-@media (min-width: 900px) {
-    main {
-        width: 40vw;
-    }
+@media only screen and (max-width: 767px) {
+
 }
-@media (max-width: 899px) {
-    main {
-        width: 80vw;
+@media only screen and (min-width: 768px) {
+    #menu-open {
+        width: 30%;
+        left: 70%;
     }
+
 }
+
+/*#endregion*/
+
