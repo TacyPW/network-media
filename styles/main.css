@@ -1,6 +1,7 @@
 /*#region imports */
 /*#endregion*/
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inconsolata:wght@300;400;700&display=swap");
 /*#region menus */
 .island, #info-closed, #menu-closed {
   display: block;
