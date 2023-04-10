@@ -1,4 +1,4 @@
-let urlprefix = getprefx();
+var urlprefix = getprefx();
 
 function getprefx() {
     raw = window.location.hostname
