@@ -2,10 +2,10 @@
 console.log("processing includes");
 
 
-$("#navigation").load("https://users.dma.ucla.edu/~tacypw/includes/nav.html", function () {
+$("#navigation").load(String(urlprefix + "includes/nav.html"), function () {
     console.log("nav loaded");
 });
 
-$("#info").load("https://users.dma.ucla.edu/~tacypw/includes/info.html", function () {
+$("#info").load(String(urlprefix + "includes/info.html"), function () {
     console.log("artist bio loaded");
 });
