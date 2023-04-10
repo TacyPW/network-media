@@ -66,7 +66,8 @@
 }
 
 #menu-sections {
-  margin-left: 3vw;
+  padding: none;
+  margin-left: vw;
   margin-top: 5vw;
   font-size: 36pt;
   list-style: none;
@@ -118,12 +119,20 @@ body {
 }
 
 /*#region all applicable */
+.centered {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .layer0 {
   z-index: 2;
 }
 
 p {
   font-size: 24px;
+  font-weight: normal;
 }
 
 h1 {
