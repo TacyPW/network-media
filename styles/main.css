@@ -111,6 +111,14 @@ img {
   height: 10vh;
 }
 
+#entext {
+  text-align: right;
+}
+
+br {
+  line-height: 10px;
+}
+
 body {
   z-index: 1;
   background-color: azure;
