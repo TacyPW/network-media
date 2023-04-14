@@ -113,13 +113,17 @@ img {
 }
 
 #entext {
+  position: absolute;
+  left: 0;
   font-family: "Schibsted Grotesk", sans-serif;
   color: black;
-  font-size: 10pt;
+  font-size: 12pt;
   text-align: left;
 }
 
 #estext {
+  position: absolute;
+  right: 0;
   font-family: "vendetta", serif;
   color: red;
   font-size: 16pt;
@@ -135,8 +139,17 @@ img {
   grid-column: 1;
   line-height: 30pt;
   width: 100%;
+  overflow: hidden;
 }
 
+@media only screen and (min-width: 768px) {
+  #entext {
+    margin-left: 20vw;
+  }
+  #estext {
+    margin-right: 20vw;
+  }
+}
 /*#endregion*/
 body {
   z-index: 1;
