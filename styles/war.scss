@@ -1,0 +1,25 @@
+#entext {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    color: black;
+    font-size: 10pt;
+    text-align: left;
+}
+
+#estext {
+    font-family: "vendetta",serif;
+    color: red;
+    font-size: 16pt;
+    text-align: right;
+}
+.textcontainer {
+    display: grid;
+}
+.textblock {
+    grid-row: 1;
+    grid-column: 1;
+    line-height: 30pt;
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+
+}

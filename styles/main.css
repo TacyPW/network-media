@@ -1,7 +1,8 @@
 /*#region imports */
-/*#endregion*/
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inconsolata:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500&display=swap");
+@import url("https://use.typekit.net/vbd4dyq.css");
 /*#region menus */
 .island, #info-closed, #menu-closed {
   display: block;
@@ -112,13 +113,31 @@ img {
 }
 
 #entext {
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: black;
+  font-size: 10pt;
+  text-align: left;
+}
+
+#estext {
+  font-family: "vendetta", serif;
+  color: red;
+  font-size: 16pt;
   text-align: right;
 }
 
-br {
-  line-height: 10px;
+.textcontainer {
+  display: grid;
 }
 
+.textblock {
+  grid-row: 1;
+  grid-column: 1;
+  line-height: 30pt;
+  width: 100%;
+}
+
+/*#endregion*/
 body {
   z-index: 1;
   background-color: azure;

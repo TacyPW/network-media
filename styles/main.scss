@@ -1,10 +1,15 @@
 /*#region imports */
 @use "land.scss";
+@use "war.scss";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inconsolata:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500&display=swap');
+@import url("https://use.typekit.net/vbd4dyq.css");
+
+
 /*#endregion*/
 
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inconsolata:wght@300;400;700&display=swap');
 $fontstack: 'Inconsolata', 'Courier New', Courier, monospace;
 
 body {
