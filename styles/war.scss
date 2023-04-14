@@ -14,16 +14,19 @@
     color: red;
     font-size: 16pt;
     text-align: right;
+    transform: translate(0, 16px);
 }
 .textcontainer {
-    display: grid;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.textblock {
-    grid-row: 1;
-    grid-column: 1;
+.stanza {
     line-height: 30pt;
     width: 100%;
-    overflow: hidden;
+
 }
 @media only screen and (min-width: 768px) {
     #entext {

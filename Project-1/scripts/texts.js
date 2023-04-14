@@ -26,7 +26,7 @@ es_text = $.get('texts/maestros.txt', function(data) {
     breakup(es_text, es_stanzas, es_poem);
     console.log(es_poem);
     es_text = data.replace(/\n/g, " <br>\n");
-    $("#estext").append(en_text);
+    $("#estext").append(es_text);
 }, 'text');
 
 function breakup(text, stanzas, poem) {
