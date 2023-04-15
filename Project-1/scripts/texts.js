@@ -7,8 +7,6 @@ let es_stanzas = [];
 let en_poem = [];
 let es_poem = [];
 
-
-
 en_text = $.get('texts/masters.txt', function(data) {
     en_text = data;
     console.log("english loaded");
@@ -17,8 +15,6 @@ en_text = $.get('texts/masters.txt', function(data) {
     en_text = data.replace(/\n/g, " <br>\n");
     $("#entext").append(en_text);
 }, 'text');
-
-
 
 es_text = $.get('texts/maestros.txt', function(data) {
     es_text = data;
@@ -36,3 +32,7 @@ function breakup(text, stanzas, poem) {
     }
 }
 
+
+function write_linepair(enline, esline /*, output_element*/) {
+
+}
