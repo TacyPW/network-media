@@ -52,20 +52,21 @@ class LinePair {
     index;
     lineNum;
     stanzaNum;
-    className = "#line";
+    id = "#line";
 
     constructor(es, en, index) {
-        this.index = index
+        this.index = index;
+        this.id += index;
         this.es = es;
         this.en = en;
-        console.log(this.className)
         this.esElem = $("<p class=\"estext\"></p>").text(this.en);
         this.enElem = $("<p class=\"entext\"></p>").text(this.es);
         this.render();
     }
 
     render() {
-        $(this.className).append(this.enElem, this.esElem);
+        
+        $(this.id).append(this.enElem, this.esElem);
     }
 }
 
@@ -93,7 +94,6 @@ class Stanza {
 
     render() {
         this.stanzaElem = $("<section class=\"stanza\"></section>").text("");
-        console.log(this.stanzaElem)
         for (let i = 0; i < this.Lines.length; i++) {
             this.Lines[i].render();
         }
