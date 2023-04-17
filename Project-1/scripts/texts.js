@@ -52,20 +52,25 @@ class LinePair {
     index;
     lineNum;
     stanzaNum;
-    id = "#line";
+    id = "line";
 
     constructor(es, en, index) {
         this.index = index;
         this.id += index;
+        console.log(this.id)
         this.es = es;
         this.en = en;
         this.esElem = $("<p class=\"estext\"></p>").text(this.en);
         this.enElem = $("<p class=\"entext\"></p>").text(this.es);
+        this.lineElem = $("<section class=\"line\"></section>").text("");
+        $(this.lineElem).attr('id', this.id);
+    console.log(this.lineElem);
+        $("#poem").append(this.lineElem);
         this.render();
     }
 
     render() {
-        
+        console.log(this.enElem, this.esElem);
         $(this.id).append(this.enElem, this.esElem);
     }
 }
@@ -84,17 +89,16 @@ class Stanza {
         this.index = index;
         this.linesTextEN = linesEN;
         this.linesTextES = linesES;
-        for (let i = 0; i < this.linesTextEN.length; i++) {
-            let lineEN = this.linesTextEN[i];
-            let lineES = this.linesTextES[i];
-            this.Lines.push(new LinePair(lineEN, lineES, this.lineIndex + i) )
-            this.render();
-        }
+        this.render();
     }
 
     render() {
         this.stanzaElem = $("<section class=\"stanza\"></section>").text("");
+        console.log(this.stanzaElem)
         for (let i = 0; i < this.Lines.length; i++) {
+            let lineEN = this.linesTextEN[i];
+            let lineES = this.linesTextES[i];
+            this.Lines.push(new LinePair(lineEN, lineES, this.lineIndex + i));
             this.Lines[i].render();
         }
     }
