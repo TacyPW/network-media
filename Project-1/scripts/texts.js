@@ -12,7 +12,8 @@ let PoemLines = [];
 split_en();
 
 function page_handler() {
-    console.log(en_poem, es_poem);
+    //console.log("poems", en_poem, es_poem);
+    console.log(("en", en_poem[0], "es", es_poem[0], 0, 0))
     PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
 }
 
@@ -52,26 +53,27 @@ class LinePair {
     index;
     lineNum;
     stanzaNum;
+    lineElem;
     id = "line";
 
     constructor(es, en, index) {
         this.index = index;
         this.id += index;
-        console.log(this.id)
         this.es = es;
         this.en = en;
         this.esElem = $("<p class=\"estext\"></p>").text(this.en);
         this.enElem = $("<p class=\"entext\"></p>").text(this.es);
-        this.lineElem = $("<section class=\"line\"></section>").text("");
+        this.lineElem = $("<div class=\"linepair\"></div>").text("");
+        
         $(this.lineElem).attr('id', this.id);
-    console.log(this.lineElem);
+        console.log("linelem", this.lineElem, this);
         $("#poem").append(this.lineElem);
         this.render();
     }
 
     render() {
-        console.log(this.enElem, this.esElem);
-        $(this.id).append(this.enElem, this.esElem);
+        console.log("rendering: ", this.id);
+        $("#" + this.id).append(this.enElem, this.esElem);
     }
 }
 
@@ -89,16 +91,19 @@ class Stanza {
         this.index = index;
         this.linesTextEN = linesEN;
         this.linesTextES = linesES;
-        this.render();
+        this.stanzaElem = $("<section class=\"stanza\"></section>").text(" ");
+        this.stanzaElem
+        console.log(this.stanzaElem)
+        for (let i = 0; i < linesEN.length; i++) {
+            let lineEN = linesEN[i];
+            let lineES = linesES[i];
+            this.Lines.push(new LinePair(lineEN, lineES, this.lineIndex + i));
+        }
     }
 
     render() {
-        this.stanzaElem = $("<section class=\"stanza\"></section>").text("");
-        console.log(this.stanzaElem)
-        for (let i = 0; i < this.Lines.length; i++) {
-            let lineEN = this.linesTextEN[i];
-            let lineES = this.linesTextES[i];
-            this.Lines.push(new LinePair(lineEN, lineES, this.lineIndex + i));
+        
+        for (let i = 0; i < linesEN.length; i++) {
             this.Lines[i].render();
         }
     }
