@@ -7,21 +7,20 @@ let es_stanzas = [];
 let en_poem = [];
 let es_poem = [];
 
+let PoemLines = [];
+
 split_en();
 
 function page_handler() {
     console.log(en_poem, es_poem);
-    write_linepair(en_poem[0][0], es_poem[0][0])
+    PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
 }
 
 function split_en() {  
-
-    console.log("splitting en")
     en_text = $.get('texts/masters.txt', function(data) {
         en_text = data;
         console.log("english loaded");
         breakup(en_text, en_stanzas, en_poem);
-        console.log(en_poem);
         en_text = data.replace(/\n/g, " <br>\n");
         $("#entext").append(en_text);
         split_es()
@@ -33,7 +32,6 @@ function split_es() {
         es_text = data;
         console.log("español cargado");
         breakup(es_text, es_stanzas, es_poem);
-        console.log(es_poem);
         es_text = data.replace(/\n/g, " <br>\n");
         $("#estext").append(es_text);
         page_handler();
@@ -47,8 +45,61 @@ function breakup(text, stanzas, poem) {
     }
 }
 
-function write_linepair(enline, esline /*, output_element*/) {
-    let es = $("<p class=\"estext\"></p>").text(esline);
-    let en = $("<p class=\"entext\"></p>").text(enline);
-    $("#line").append(en, es);
+class LinePair {
+    es = "";
+    en = "";
+    xPosition;
+    index;
+    lineNum;
+    stanzaNum;
+    className = "#line";
+
+    constructor(es, en, index) {
+        this.index = index
+        this.es = es;
+        this.en = en;
+        console.log(this.className)
+        this.esElem = $("<p class=\"estext\"></p>").text(this.en);
+        this.enElem = $("<p class=\"entext\"></p>").text(this.es);
+        this.render();
+    }
+
+    render() {
+        $(this.className).append(this.enElem, this.esElem);
+    }
+}
+
+
+class Stanza {
+    Lines = [];
+    linesTextEN;
+    linesTextES;
+    index;
+    lineIndex;
+    className = Stanza;
+
+    constructor(linesEN, linesES, index, lineIndex) {
+        this.lineIndex = lineIndex;
+        this.index = index;
+        this.linesTextEN = linesEN;
+        this.linesTextES = linesES;
+        for (let i = 0; i < this.linesTextEN.length; i++) {
+            let lineEN = this.linesTextEN[i];
+            let lineES = this.linesTextES[i];
+            this.Lines.push(new LinePair(lineEN, lineES, this.lineIndex + i) )
+            this.render();
+        }
+    }
+
+    render() {
+        this.stanzaElem = $("<section class=\"stanza\"></section>").text("");
+        console.log(this.stanzaElem)
+        for (let i = 0; i < this.Lines.length; i++) {
+            this.Lines[i].render();
+        }
+    }
+
+    getLastIndex() {
+        return Lines[this.Lines.length - 1].index //last index val in Lines array
+    }
 }
