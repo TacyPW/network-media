@@ -156,6 +156,10 @@ img {
   width: 50%;
 }
 
+.poem-container {
+  max-width: 1200px;
+}
+
 /*#endregion*/
 body {
   z-index: 1;

@@ -88,13 +88,12 @@ class Stanza {
     id = "stanza";
 
     constructor(linesEN, linesES, index, lineIndex) {
-
         this.lineIndex = lineIndex;
         this.index = index;
         this.id += index;
         this.linesTextEN = linesEN;
         this.linesTextES = linesES;
-        this.stanzaElem = $("<section class=\"stanza\"></section>").text(" ");
+        this.stanzaElem = $("<section class=\"stanza grid-100 mobile-grid-100\"></section>").text(" ");
         $(this.stanzaElem).attr('id', this.id);
         console.log(this.stanzaElem);
         $("#poem").append(this.stanzaElem);
