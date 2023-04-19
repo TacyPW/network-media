@@ -3,12 +3,19 @@
     /*#region menus */ 
     .island {
         display: block;
-        background-color: red;
+        background-color: #FFFFFFB2;
         transition: background-color .5s ease-in;
+        opacity: 80%;
         width: 10vh;
         height: 10vh;
         z-index: 1;
         position: fixed;
+        border: 2px solid black;
+        border-radius: 3vh;
+    }
+    .island:hover {
+        background-color: #FFFFFFE5;
+        transition: background-color .5s ease-in;
     }
     .overlay {
         display: block;
@@ -20,7 +27,7 @@
     }
     .btn {
         background-position: center center;
-        background-size: 70% 70%;
+        background-size: 60% 60%;
         background-repeat: no-repeat;
         width: 10vh;
         height: 10vh;
@@ -29,18 +36,13 @@
     .navbtn {
         @extend .btn;
         background-image: url(../assets/lines.svg);
-        top: 0;
-        right: 0;
     }
     .infobtn {
         @extend .btn;
         background-image: url(../assets/person.svg);
-        bottom: 0;
-        left: 0;
     } 
     .closebtn {
         @extend .btn;
-        background-size: 60% 60%;
         background-image: url(../assets/xmark.svg);
     }
 
@@ -48,12 +50,10 @@
     #menu-closed {
         @extend .island;
         display: block;
-        right: 0;
-        top: 0;
+        right: 1vh;
+        top: 1vh;
     }
-    #menu-closed:hover {
-        background-color: rgba(37, 37, 37, 0.891);
-    }
+
     #menu-open {
         @extend .overlay;
         display: none;
@@ -62,7 +62,7 @@
     }
     #menu-sections {
         padding: none;
-        margin-left: vw;
+        margin-left: 1vw;
         margin-top: 5vw;
         font-size: 36pt;
         list-style: none;
@@ -79,13 +79,10 @@
 
     #info-closed {
         @extend .island;
-        left: 0;
-        bottom: 0;
+        left: 1vh;
+        bottom: 1vh;
     }
-    #info-closed:hover {
-        background-color: rgba(37, 37, 37, 0.891);
-        transition: background-color .5s ease-in;
-    }
+
     #info-open {
         @extend .overlay;
         display: none;
