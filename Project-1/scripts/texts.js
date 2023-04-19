@@ -11,11 +11,7 @@ let PoemLines = [];
 
 split_en();
 
-function page_handler() {
-    //console.log("poems", en_poem, es_poem);
-    console.log(("en", en_poem[0], "es", es_poem[0], 0, 0))
-    PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
-}
+
 
 function split_en() {  
     en_text = $.get('texts/masters.txt', function(data) {
@@ -39,12 +35,22 @@ function split_es() {
     }, 'text');
 }
 
+function page_handler() {
+    //console.log("poems", en_poem, es_poem);
+    console.log(("en", en_poem[0], "es", es_poem[0], 0, 0))
+    PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
+}
+
 function breakup(text, stanzas, poem) {
     stanzas = text.split("\n\n");
     for (let i = 0; i < stanzas.length; i++) {
         poem.push(stanzas[i].split("\n"));
     }
 }
+function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
 
 class LinePair {
     es = "";
@@ -63,9 +69,9 @@ class LinePair {
         this.en = en;
         this.esElem = $("<p class=\"estext\"></p>").text(this.en);
         this.enElem = $("<p class=\"entext\"></p>").text(this.es);
-        this.lineElem = $("<div class=\"linepair\"></div>").text("");
-        
+        this.lineElem = $("<div class=\"linepair grid-50 mobile-grid-100\"></div>").text("");
         $(this.lineElem).attr('id', this.id);
+        $(this.lineElem).css('left', String(randInt(0,50)) + "5");
         //console.log("linelem", this.lineElem, this);
         $(dest).append(this.lineElem);
         this.render();
@@ -74,6 +80,7 @@ class LinePair {
     render() {
         //console.log("rendering: ", this.id);
         $("#" + this.id).append(this.enElem, this.esElem);
+        $(this.lineElem).after("<br class=\"clear linepair\">")
     }
 }
 
