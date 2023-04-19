@@ -27,16 +27,6 @@
     width: 100%;
 
 }
-@media only screen and (min-width: 768px) {
-    #entext {
-        margin-left: 20vw;
-    }
-    #estext {
-        margin-right: 20vw;
-    }  
-
-}
-
 .linepair {
     background-color: gray;
     top: inherit;
@@ -51,3 +41,19 @@
     border-color: red;
     border-radius: 1vh;
 }
+
+@media only screen and (max-width: 767px) {
+    .mobiline {
+        margin-left: 0 !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #entext {
+        margin-left: 20vw;
+    }
+    #estext {
+        margin-right: 20vw;
+    }  
+
+}
+

@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500&display=swap");
 @import url("https://use.typekit.net/vbd4dyq.css");
 /*#region menus */
-.island, #info-closed, #menu-closed {
+.island, #info-closed, #menu-closed, .infoclose, .navclose {
   display: block;
   background-color: rgba(255, 255, 255, 0.6980392157);
   transition: background-color 0.5s ease-in;
@@ -17,7 +17,7 @@
   border-radius: 3vh;
 }
 
-.island:hover, #info-closed:hover, #menu-closed:hover {
+.island:hover, #info-closed:hover, #menu-closed:hover, .infoclose:hover, .navclose:hover {
   background-color: rgba(255, 255, 255, 0.8980392157);
   transition: background-color 0.5s ease-in;
 }
@@ -50,6 +50,18 @@
 
 .closebtn {
   background-image: url(../assets/xmark.svg);
+}
+
+.navclose {
+  display: block;
+  right: 1vh;
+  top: 1vh;
+}
+
+.infoclose {
+  display: block;
+  left: 1vh;
+  bottom: 1vh;
 }
 
 /*#region nav */
@@ -136,14 +148,6 @@ img {
   width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-  #entext {
-    margin-left: 20vw;
-  }
-  #estext {
-    margin-right: 20vw;
-  }
-}
 .linepair {
   background-color: gray;
   top: inherit;
@@ -160,6 +164,19 @@ img {
   border-radius: 1vh;
 }
 
+@media only screen and (max-width: 767px) {
+  .mobiline {
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #entext {
+    margin-left: 20vw;
+  }
+  #estext {
+    margin-right: 20vw;
+  }
+}
 /*#endregion*/
 body {
   z-index: 1;

@@ -44,6 +44,19 @@
     .closebtn {
         @extend .btn;
         background-image: url(../assets/xmark.svg);
+
+    }
+    .navclose {
+        @extend .island;
+        display: block;
+        right: 1vh;
+        top: 1vh;
+    }
+    .infoclose {
+        @extend .island;
+        display: block;
+        left: 1vh;
+        bottom: 1vh;
     }
 
     /*#region nav */

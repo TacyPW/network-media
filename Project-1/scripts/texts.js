@@ -69,18 +69,21 @@ class LinePair {
         this.en = en;
         this.esElem = $("<p class=\"estext\"></p>").text(this.en);
         this.enElem = $("<p class=\"entext\"></p>").text(this.es);
-        this.lineElem = $("<div class=\"linepair grid-50 mobile-grid-100\"></div>").text("");
+        this.lineElem = $("<div class=\"linepair mobiline grid-50 mobile-grid-100\"></div>").text("");
         $(this.lineElem).attr('id', this.id);
-        $(this.lineElem).css('left', String(randInt(0,50)) + "5");
+        
         //console.log("linelem", this.lineElem, this);
         $(dest).append(this.lineElem);
+        
         this.render();
     }
 
     render() {
         //console.log("rendering: ", this.id);
+        
+        $("#" + this.id).css('margin-left', String(randInt(10,40)) + "%");
         $("#" + this.id).append(this.enElem, this.esElem);
-        $(this.lineElem).after("<br class=\"clear linepair\">")
+        $(this.lineElem).after("<br class=\"clear hide-on-mobile\">")
     }
 }
 
