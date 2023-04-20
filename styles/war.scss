@@ -1,20 +1,19 @@
-#entext {
-    position: absolute;
-    left: 0;
+.entext {
     font-family: 'Schibsted Grotesk', sans-serif;
     color: black;
-    font-size: 12pt;
+    font-size: 2vh;
     text-align: left;
 }
 
-#estext {
-    position: absolute; 
-    right: 0;
+.estext {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: 0;
     font-family: "vendetta",serif;
     color: red;
-    font-size: 16pt;
+    font-size: 3vh;
     text-align: right;
-    transform: translate(0, 16px);
 }
 .textcontainer {
     width: 100vw;
@@ -24,9 +23,29 @@
     left: 0;
 }
 .stanza {
-    line-height: 30pt;
+    
     width: 100%;
 
+}
+.linepair {
+    background-color: gray;
+    top: inherit;
+    display: block;
+}
+.poem-container {
+    max-width: 1200px;
+}
+
+.active-line {
+    border: .5vh;
+    border-color: red;
+    border-radius: 1vh;
+}
+
+@media only screen and (max-width: 767px) {
+    .mobiline {
+        margin-left: 0 !important;
+    }
 }
 @media only screen and (min-width: 768px) {
     #entext {
@@ -34,6 +53,7 @@
     }
     #estext {
         margin-right: 20vw;
-    }
+    }  
 
 }
+
