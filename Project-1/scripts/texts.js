@@ -122,6 +122,8 @@ class Stanza {
             let lineES = linesES[i];
             this.Lines.push(new LinePair(lineEN, lineES, this.lineIndex + i, "#" + this.id));
         }
+        $(this.stanzaElem).before("<br>")
+        $(this.stanzaElem).after("<br>")
     }
 
     render() {
