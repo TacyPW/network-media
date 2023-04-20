@@ -38,7 +38,20 @@ function split_es() {
 function page_handler() {
     //console.log("poems", en_poem, es_poem);
     console.log(("en", en_poem[0], "es", es_poem[0], 0, 0))
-    PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
+    for (let i = 0; i < en_poem.length; i++) {
+        const enstanz = en_poem[i];
+        const esstanz = es_poem[i];
+        let oldindex;
+        if (i = 0) {
+            oldindex = 0
+        } else {
+            console.log(PoemLines[i-1])
+            //oldindex = PoemLines[i-1].lastindex
+        }
+
+        PoemLines.push(new Stanza(esstanz, enstanz, i, oldindex));
+    }
+    
 }
 
 function breakup(text, stanzas, poem) {
@@ -86,8 +99,6 @@ class LinePair {
         $(this.lineElem).after("<br class=\"clear hide-on-mobile\">")
     }
 }
-
-
 class Stanza {
     Lines = [];
     linesTextEN;
@@ -96,6 +107,7 @@ class Stanza {
     lineIndex;
     className = Stanza;
     id = "stanza";
+    lastindex = Lines.slice(-1).index;
 
     constructor(linesEN, linesES, index, lineIndex) {
         this.lineIndex = lineIndex;
