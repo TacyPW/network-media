@@ -1,5 +1,5 @@
 /*#region imports */
-@use "land.scss";
+@use "menu.scss";
 @use "war.scss";
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inconsolata:wght@300;400;700&display=swap');
@@ -15,7 +15,6 @@ $fontstack: 'Inconsolata', 'Courier New', Courier, monospace;
 body {
     //display: inline;
     z-index: 1;
-    background-color: azure;
     font-family: $fontstack;
     font-size: 24px;
 

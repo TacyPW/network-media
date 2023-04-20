@@ -4,14 +4,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500&display=swap");
 @import url("https://use.typekit.net/vbd4dyq.css");
 /*#region menus */
-.island, #info-closed, #menu-closed {
+.island, #info-closed, #menu-closed, .infoclose, .navclose {
   display: block;
-  background-color: red;
+  background-color: rgba(255, 255, 255, 0.6980392157);
   transition: background-color 0.5s ease-in;
+  opacity: 80%;
   width: 10vh;
   height: 10vh;
   z-index: 1;
   position: fixed;
+  border: 2px solid black;
+  border-radius: 3vh;
+}
+
+.island:hover, #info-closed:hover, #menu-closed:hover, .infoclose:hover, .navclose:hover {
+  background-color: rgba(255, 255, 255, 0.8980392157);
+  transition: background-color 0.5s ease-in;
 }
 
 .overlay, #info-open, #menu-open {
@@ -25,7 +33,7 @@
 
 .btn, .closebtn, .infobtn, .navbtn {
   background-position: center center;
-  background-size: 70% 70%;
+  background-size: 60% 60%;
   background-repeat: no-repeat;
   width: 10vh;
   height: 10vh;
@@ -34,30 +42,33 @@
 
 .navbtn {
   background-image: url(../assets/lines.svg);
-  top: 0;
-  right: 0;
 }
 
 .infobtn {
   background-image: url(../assets/person.svg);
-  bottom: 0;
-  left: 0;
 }
 
 .closebtn {
-  background-size: 60% 60%;
   background-image: url(../assets/xmark.svg);
+}
+
+.navclose {
+  display: block;
+  right: 1vh;
+  top: 1vh;
+}
+
+.infoclose {
+  display: block;
+  left: 1vh;
+  bottom: 1vh;
 }
 
 /*#region nav */
 #menu-closed {
   display: block;
-  right: 0;
-  top: 0;
-}
-
-#menu-closed:hover {
-  background-color: rgba(37, 37, 37, 0.891);
+  right: 1vh;
+  top: 1vh;
 }
 
 #menu-open {
@@ -68,7 +79,7 @@
 
 #menu-sections {
   padding: none;
-  margin-left: vw;
+  margin-left: 1vw;
   margin-top: 5vw;
   font-size: 36pt;
   list-style: none;
@@ -85,13 +96,8 @@
 
 /*#endregion*/
 #info-closed {
-  left: 0;
-  bottom: 0;
-}
-
-#info-closed:hover {
-  background-color: rgba(37, 37, 37, 0.891);
-  transition: background-color 0.5s ease-in;
+  left: 1vh;
+  bottom: 1vh;
 }
 
 #info-open {
@@ -112,23 +118,22 @@ img {
   height: 10vh;
 }
 
-#entext {
-  position: absolute;
-  left: 0;
+.entext {
   font-family: "Schibsted Grotesk", sans-serif;
   color: black;
-  font-size: 12pt;
+  font-size: 2vh;
   text-align: left;
 }
 
-#estext {
-  position: absolute;
-  right: 0;
+.estext {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
   font-family: "vendetta", serif;
   color: red;
-  font-size: 16pt;
+  font-size: 3vh;
   text-align: right;
-  transform: translate(0, 16px);
 }
 
 .textcontainer {
@@ -140,10 +145,30 @@ img {
 }
 
 .stanza {
-  line-height: 30pt;
   width: 100%;
 }
 
+.linepair {
+  background-color: gray;
+  top: inherit;
+  display: block;
+}
+
+.poem-container {
+  max-width: 1200px;
+}
+
+.active-line {
+  border: 0.5vh;
+  border-color: red;
+  border-radius: 1vh;
+}
+
+@media only screen and (max-width: 767px) {
+  .mobiline {
+    margin-left: 0 !important;
+  }
+}
 @media only screen and (min-width: 768px) {
   #entext {
     margin-left: 20vw;
@@ -155,7 +180,6 @@ img {
 /*#endregion*/
 body {
   z-index: 1;
-  background-color: azure;
   font-family: "Inconsolata", "Courier New", Courier, monospace;
   font-size: 24px;
 }
