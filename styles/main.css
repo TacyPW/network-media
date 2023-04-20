@@ -180,7 +180,6 @@ img {
 /*#endregion*/
 body {
   z-index: 1;
-  background-color: azure;
   font-family: "Inconsolata", "Courier New", Courier, monospace;
   font-size: 24px;
 }
