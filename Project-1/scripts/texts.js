@@ -38,9 +38,16 @@ function split_es() {
 function page_handler() {
     //console.log("poems", en_poem, es_poem);
     //console.log("en", en_poem[0], "es", es_poem[0])
-    PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
-    PoemLines.push(new Stanza(en_poem[1], es_poem[1], 1, PoemLines[1-1].getLastIndex()));
-    console.log(PoemLines[1-1].getLastIndex())
+    for (let i = 0; i < en_poem.length; i++) {
+        const enstanz = en_poem[i];
+        const esstanz = es_poem[i];
+        if (i === 0) {
+            PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
+        } else {
+            PoemLines.push(new Stanza(en_poem[i], es_poem[i], i, PoemLines[i-1].getLastIndex()));
+        }
+    }
+  
 
 }
 
