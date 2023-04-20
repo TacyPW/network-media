@@ -37,8 +37,11 @@ function split_es() {
 
 function page_handler() {
     //console.log("poems", en_poem, es_poem);
-    console.log(("en", en_poem[0], "es", es_poem[0], 0, 0))
+    //console.log("en", en_poem[0], "es", es_poem[0])
     PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
+    PoemLines.push(new Stanza(en_poem[1], es_poem[1], 1, PoemLines[1-1].getLastIndex()));
+    console.log(PoemLines[1-1].getLastIndex())
+
 }
 
 function breakup(text, stanzas, poem) {
@@ -97,15 +100,15 @@ class Stanza {
     className = Stanza;
     id = "stanza";
 
-    constructor(linesEN, linesES, index, lineIndex) {
-        this.lineIndex = lineIndex;
+    constructor(linesEN, linesES, index, lastIndex) {
+        this.lineIndex = lastIndex + 1;
         this.index = index;
         this.id += index;
         this.linesTextEN = linesEN;
         this.linesTextES = linesES;
         this.stanzaElem = $("<section class=\"stanza grid-100 mobile-grid-100\"></section>").text(" ");
         $(this.stanzaElem).attr('id', this.id);
-        console.log(this.stanzaElem);
+        //console.log(this.stanzaElem);
         $("#poem").append(this.stanzaElem);
         for (let i = 0; i < linesEN.length; i++) {
             let lineEN = linesEN[i];
@@ -122,6 +125,6 @@ class Stanza {
     }
 
     getLastIndex() {
-        return Lines[this.Lines.length - 1].index //last index val in Lines array
+        return this.Lines[this.Lines.length - 1].index //last index val in Lines array
     }
 }
