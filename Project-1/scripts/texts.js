@@ -38,7 +38,7 @@ class LinePair {
     render() {
         //console.log("rendering: ", this.id);
         
-        $("#" + this.id).css('margin-left', String(randInt(10,40)) + "%");
+        $("#" + this.id).css('margin-left', String(randInt(15,35)) + "%");
         $("#" + this.id).append(this.enElem, this.esElem);
         $(this.lineElem).after("<br class=\"clear hide-on-mobile\">")
     }
@@ -72,7 +72,6 @@ class Stanza {
     }
 
     render() {
-        
         for (let i = 0; i < linesEN.length; i++) {
             this.Lines[i].render();
         }
