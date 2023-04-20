@@ -1,56 +1,4 @@
-var es_text;
-var en_text;
-
-let en_stanzas = [];
-let es_stanzas = [];
-
-let en_poem = [];
-let es_poem = [];
-
-let PoemLines = [];
-
-split_en();
-
-
-
-function split_en() {  
-    en_text = $.get('texts/masters.txt', function(data) {
-        en_text = data;
-        console.log("english loaded");
-        breakup(en_text, en_stanzas, en_poem);
-        en_text = data.replace(/\n/g, " <br>\n");
-        $("#entext").append(en_text);
-        split_es()
-    }, 'text');
-}
-
-function split_es() {
-    es_text = $.get('texts/maestros.txt', function(data) {
-        es_text = data;
-        console.log("español cargado");
-        breakup(es_text, es_stanzas, es_poem);
-        es_text = data.replace(/\n/g, " <br>\n");
-        $("#estext").append(es_text);
-        page_handler();
-    }, 'text');
-}
-
-function page_handler() {
-    //console.log("poems", en_poem, es_poem);
-    //console.log("en", en_poem[0], "es", es_poem[0])
-    for (let i = 0; i < en_poem.length; i++) {
-        const enstanz = en_poem[i];
-        const esstanz = es_poem[i];
-        if (i === 0) {
-            PoemLines.push(new Stanza(en_poem[0], es_poem[0], 0, 0));
-        } else {
-            PoemLines.push(new Stanza(en_poem[i], es_poem[i], i, PoemLines[i-1].getLastIndex()));
-        }
-    }
-  
-
-}
-
+// Global Functions
 function breakup(text, stanzas, poem) {
     stanzas = text.split("\n\n");
     for (let i = 0; i < stanzas.length; i++) {
@@ -60,8 +8,7 @@ function breakup(text, stanzas, poem) {
 function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-
-
+// Classes
 class LinePair {
     es = "";
     en = "";
@@ -96,8 +43,6 @@ class LinePair {
         $(this.lineElem).after("<br class=\"clear hide-on-mobile\">")
     }
 }
-
-
 class Stanza {
     Lines = [];
     linesTextEN;
@@ -137,3 +82,67 @@ class Stanza {
         return this.Lines[this.Lines.length - 1].index //last index val in Lines array
     }
 }
+class Poem {
+    es_text;
+    en_text;
+
+    en_stanzas = [];
+    es_stanzas = [];
+
+    en_poem = [];
+    es_poem = [];
+
+    PoemLines = [];
+
+    constructor() {
+        this.en_poem = [];
+            this.es_poem = [];
+            this.en_stanzas = [];
+            this.es_stanzas = [];
+            this.PoemLines = [];
+        this.split_en();
+    }
+
+    split_en() {  
+        self = this;
+        this.en_text = $.get('texts/masters.txt', function(data) {
+
+            self.en_text = data;
+            console.log("english loaded");
+            breakup(self.en_text, self.en_stanzas, self.en_poem);
+            self.en_text = data.replace(/\n/g, " <br>\n");
+            $("#entext").append(self.en_text);
+            self.split_es()
+        }, 'text');
+    }
+    
+    split_es() {
+        self = this;
+        this.es_text = $.get('texts/maestros.txt', function(data) {
+            self.es_text = data;
+            console.log("español cargado");
+            breakup(self.es_text, self.es_stanzas, self.es_poem);
+            self.es_text = data.replace(/\n/g, " <br>\n");
+            $("#estext").append(self.es_text);
+            self.page_handler();
+        }, 'text');
+    }
+    
+    page_handler() {
+        //console.log("poems", en_poem, es_poem);
+        //console.log("en", en_poem[0], "es", es_poem[0])
+        for (let i = 0; i < this.en_poem.length; i++) {
+            const enstanz = this.en_poem[i];
+            const esstanz = this.es_poem[i];
+            if (i === 0) {
+                this.PoemLines.push(new Stanza(this.en_poem[0], this.es_poem[0], 0, 0));
+            } else {
+                this.PoemLines.push(new Stanza(this.en_poem[i], this.es_poem[i], i, this.PoemLines[i-1].getLastIndex()));
+            }
+        }
+      
+    
+    }
+
+}
+let BobDylan = new Poem();
