@@ -1,3 +1,11 @@
+var currentId = "line1";
+
+$(document).ready(function () {
+    $(document).keydown(function (e) { 
+        console.log(e.which);
+    });
+});
+/*
 var ul = document.getElementById('list');
 var liSelected;
 var index = -1;
@@ -63,3 +71,4 @@ function addClass(el, className) {
     el.className += ' ' + className;
   }
 };
+*/
