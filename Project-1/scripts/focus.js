@@ -1,5 +1,5 @@
 var currId = "line1";
-var idStr = "line";
+var idStr = "#line";
 var currIndex = 0;
 // Gets the number of elements with class yourClass
 var numItems;
@@ -11,10 +11,18 @@ $(document).ready(function () {
         if (currIndex < $('.linepair').length) {
             switch (e.which) {
                 case 40:
-                    console.log("down")
-                    break;
+                    if (currIndex < $('.linepair').length) {
+                        $(idStr + String(currIndex)).removeClass('active-line');  
+                        $(idStr + String(currIndex + 1)).addClass('active-line');
+                        currIndex++;
+                        break;
+                    }
                 case 38:
-                    console.log("up")
+                    if (currIndex > 1) {
+                    $(idStr + String(currIndex)).removeClass('active-line');  
+                    $(idStr + String(currIndex - 1)).addClass('active-line');
+                    currIndex--;
+                    }
                     break;
                 case 37:
                     console.log("left")
@@ -29,6 +37,7 @@ $(document).ready(function () {
 
     });
 });
+
 
 
 /*
