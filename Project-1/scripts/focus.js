@@ -1,10 +1,36 @@
-var currentId = "line1";
+var currId = "line1";
+var idStr = "line";
+var currIndex = 0;
+// Gets the number of elements with class yourClass
+var numItems;
 
 $(document).ready(function () {
+
     $(document).keydown(function (e) { 
-        console.log(e.which);
+    
+        if (currIndex < $('.linepair').length) {
+            switch (e.which) {
+                case 40:
+                    console.log("down")
+                    break;
+                case 38:
+                    console.log("up")
+                    break;
+                case 37:
+                    console.log("left")
+                    break;
+                case 39:
+                    console.log("right")
+                    break;
+                default:
+                    break;
+            }
+        }
+
     });
 });
+
+
 /*
 var ul = document.getElementById('list');
 var liSelected;
