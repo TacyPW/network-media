@@ -118,6 +118,23 @@ img {
   height: 10vh;
 }
 
+.instruction {
+  color: black;
+  transition: color 2s ease;
+  font-family: "Inconsolata", "Courier New", Courier, monospace;
+  position: fixed;
+  left: 2vh;
+  top: 1vh;
+}
+
+.instruction:not(:hover) {
+  color: rgba(0, 0, 0, 0);
+}
+
+.direct {
+  color: black !important;
+}
+
 .linetext, .estext, .entext {
   display: block;
   position: relative;

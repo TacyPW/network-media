@@ -1,3 +1,18 @@
+.instruction {
+    color: black;
+    transition: color 2s ease;
+    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
+    position: fixed;
+    left: 2vh;
+    top: 1vh;
+}
+.instruction:not(:hover) {
+    color: #00000000;
+}
+.direct {
+    color: black !important;
+}
+
 .linetext {
     display: block;
     position: relative;
