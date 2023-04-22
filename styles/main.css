@@ -118,6 +118,7 @@ img {
   height: 10vh;
 }
 
+/*#region instructions */
 .instruction {
   color: black;
   transition: color 2s ease;
@@ -135,6 +136,7 @@ img {
   color: black !important;
 }
 
+/*#endregion*/
 .linetext, .estext, .entext {
   display: block;
   position: relative;
