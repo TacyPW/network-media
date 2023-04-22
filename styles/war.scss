@@ -1,10 +1,9 @@
 .entext {
     font-family: 'Schibsted Grotesk', sans-serif;
     color: black;
-    font-size: 2vh;
+    font-size: 3vh;
     text-align: left;
 }
-
 .estext {
     display: block;
     position: relative;
@@ -12,7 +11,7 @@
     margin-right: 0;
     font-family: "vendetta",serif;
     color: red;
-    font-size: 3vh;
+    font-size: 4vh;
     text-align: right;
 }
 .textcontainer {
@@ -23,14 +22,16 @@
     left: 0;
 }
 .stanza {
-    
     width: 100%;
 
 }
 .linepair {
-    background-color: gray;
+    border: .25vh solid gray;
+    border-radius: 1vh;
     top: inherit;
     display: block;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .poem-container {
     max-width: 1200px;
