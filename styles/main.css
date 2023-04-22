@@ -118,16 +118,22 @@ img {
   height: 10vh;
 }
 
+.linetext, .estext, .entext {
+  display: block;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .entext {
   font-family: "Schibsted Grotesk", sans-serif;
   color: black;
   font-size: 3vh;
   text-align: left;
+  margin-bottom: 1vh;
 }
 
 .estext {
-  display: block;
-  position: relative;
   margin-left: auto;
   margin-right: 0;
   font-family: "vendetta", serif;
@@ -149,12 +155,11 @@ img {
 }
 
 .linepair {
-  border: 0.25vh solid gray;
-  border-radius: 1vh;
+  border: 0.1vh solid gray;
+  border-radius: 3vh;
   top: inherit;
   display: block;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 4% 5% 4%;
 }
 
 .poem-container {
@@ -162,9 +167,7 @@ img {
 }
 
 .active-line {
-  border: 0.5vh;
-  border-color: red;
-  border-radius: 1vh;
+  border: 0.25vh solid rgb(255, 51, 0);
 }
 
 @media only screen and (max-width: 767px) {
