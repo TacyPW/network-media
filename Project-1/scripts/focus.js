@@ -1,7 +1,6 @@
-var currId = "line1";
+var currId = "line0";
 var idStr = "#line";
 var currIndex = 0;
-// Gets the number of elements with class yourClass
 var numItems;
 
 $(document).ready(function () {
@@ -11,24 +10,16 @@ $(document).ready(function () {
         if (currIndex < $('.linepair').length) {
             switch (e.which) {
                 case 40:
-                    if (currIndex < $('.linepair').length) {
-                        $(idStr + String(currIndex)).removeClass('active-line');  
-                        $(idStr + String(currIndex + 1)).addClass('active-line');
-                        currIndex++;
-                        break;
-                    }
+                    downLine();
+                    break;
                 case 38:
-                    if (currIndex > 1) {
-                    $(idStr + String(currIndex)).removeClass('active-line');  
-                    $(idStr + String(currIndex - 1)).addClass('active-line');
-                    currIndex--;
-                    }
+                    upLine();
                     break;
                 case 37:
-                    console.log("left")
+                    upLine();
                     break;
                 case 39:
-                    console.log("right")
+                    downLine();
                     break;
                 default:
                     break;
@@ -37,6 +28,23 @@ $(document).ready(function () {
 
     });
 });
+
+function downLine() {
+    if (currIndex < $('.linepair').length) {
+        $(idStr + String(currIndex)).removeClass('active-line');  
+        $(idStr + String(currIndex + 1)).addClass('active-line');
+        currIndex++;
+        
+    }
+}
+
+function upLine() {
+    if (currIndex > 0) {
+        $(idStr + String(currIndex)).removeClass('active-line');  
+        $(idStr + String(currIndex - 1)).addClass('active-line');
+        currIndex--;
+        }
+}
 
 
 
