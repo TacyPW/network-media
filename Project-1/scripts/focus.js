@@ -4,10 +4,10 @@ var currIndex = 0;
 var numItems;
 
 $(document).ready(function () {
-
     $(document).keydown(function (e) { 
-    
+        
         if (currIndex < $('.linepair').length) {
+            
             switch (e.which) {
                 case 40:
                     downLine();
@@ -25,25 +25,50 @@ $(document).ready(function () {
                     break;
             }
         }
-
     });
 });
 
 function downLine() {
-    if (currIndex < $('.linepair').length) {
+    if (currIndex < $('.linepair').length-1) {
+        const nextLine = document.getElementById((idStr + String((currIndex + 1))).replace('#',''));
+        const y = nextLine.offsetTop - (window.innerHeight / 2);
+
         $(idStr + String(currIndex)).removeClass('active-line');  
         $(idStr + String(currIndex + 1)).addClass('active-line');
-        currIndex++;
         
+        setTimeout(function() {
+        window.scrollTo(
+            {
+            top: y,
+            left: 0,
+            behavior: 'smooth'
+            }
+        ), 100
+        })
+        currIndex++;
     }
 }
 
 function upLine() {
+    
     if (currIndex > 0) {
+        const nextLine = document.getElementById((idStr + String((currIndex - 1))).replace('#',''));
+        const y = nextLine.offsetTop - (window.innerHeight / 2);
+        
         $(idStr + String(currIndex)).removeClass('active-line');  
         $(idStr + String(currIndex - 1)).addClass('active-line');
+        setTimeout(function() {
+            window.scrollTo(
+                {
+                top: y,
+                left: 0,
+                behavior: 'smooth'
+                }
+            ), 100
+        })
         currIndex--;
-        }
+
+    }
 }
 
 
