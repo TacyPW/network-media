@@ -32,7 +32,7 @@ function downLine() {
     if (currIndex < $('.linepair').length-1) {
         const nextLine = document.getElementById((idStr + String((currIndex + 1))).replace('#',''));
         const y = nextLine.offsetTop - (window.innerHeight / 2);
-
+        showfigure((idStr + String((currIndex + 1))).replace('#',''));
         $(idStr + String(currIndex)).removeClass('active-line');  
         $(idStr + String(currIndex + 1)).addClass('active-line');
         
