@@ -15,7 +15,9 @@
 }
 /*#endregion*/
 
+/*#region  */
 
+/*#endregion*/
 .linetext {
     display: block;
     position: relative;
@@ -59,9 +61,20 @@
 .poem-container {
     max-width: 1200px;
 }
+
 .active-line {
     border: .25vh solid rgb(255, 51, 0);
 }
+
+body {
+    position: relative;
+}
+.figure {
+    position: absolute;
+    transform: translate(0, 5vw);
+}
+
+
 
 @media only screen and (max-width: 767px) {
     .mobiline {

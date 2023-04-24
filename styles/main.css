@@ -137,6 +137,8 @@ img {
 }
 
 /*#endregion*/
+/*#region  */
+/*#endregion*/
 .linetext, .estext, .entext {
   display: block;
   position: relative;
@@ -186,6 +188,15 @@ img {
 
 .active-line {
   border: 0.25vh solid rgb(255, 51, 0);
+}
+
+body {
+  position: relative;
+}
+
+.figure {
+  position: absolute;
+  transform: translate(0, 5vw);
 }
 
 @media only screen and (max-width: 767px) {
@@ -238,6 +249,7 @@ h2 {
   color: blueviolet;
 }
 
+/*#endregion*/
 /*#region Breakpoints */
 @media only screen and (min-width: 768px) {
   #menu-open {
