@@ -113,6 +113,19 @@ img {
   margin: auto;
 }
 
+#info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#information {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*#endregion*/
 .spacer {
   height: 10vh;
@@ -238,6 +251,7 @@ h2 {
   color: blueviolet;
 }
 
+/*#endregion*/
 /*#region Breakpoints */
 @media only screen and (min-width: 768px) {
   #menu-open {

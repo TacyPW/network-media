@@ -6,13 +6,28 @@
 <div id="info-open">
     <div class="grid-20 hide-on-mobile">&nbsp;</div> 
     
-    <div class="centered">   
-        <h3 id="infohead"></h3>
-        <p id="information"> </p>
+    <div id="info-content" class="grid-container">   
     </div>
     
     <div class="grid-20 hide-on-mobile">&nbsp;</div>    
     <div>
-        <div class="infobtn closebtn infoclose " onclick="close_info()">&nbsp;</div>
+        <div class="infobtn closebtn infoclose" onclick="close_info()">&nbsp;</div>
     </div>
-</div>     
+</div>  
+<script>
+    console.log("asic")
+    async function logJSONData() {
+        const response = await fetch("info.json");
+        const jsonData = await response.json();
+
+        let infohead = $("<h3 id=\"information\" class=\"grid-70 mobile-grid-100\"></h3><br class=\"clear\"").text(this.en);
+        let infobody = $("<p id=\"infohead\" class=\"grid-70 mobile-grid-100\"></p>").text(this.en);
+        $(infohead).append(jsonData.infohead);
+        $(infobody).append(jsonData.information);
+
+        $("#info-content").append(infohead);
+        $("#info-content").append(infobody);
+    };
+    logJSONData();
+</script>   
+
