@@ -1,0 +1,83 @@
+/*#region instructions */
+.instruction {
+  color: black;
+  transition: color 2s ease;
+  font-family: "Inconsolata", "Courier New", Courier, monospace;
+  position: fixed;
+  left: 2vh;
+  top: 1vh;
+}
+
+.instruction:not(:hover) {
+  color: rgba(0, 0, 0, 0);
+}
+
+.direct {
+  color: black !important;
+}
+
+/*#endregion*/
+.linetext, .estext, .entext {
+  display: block;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.entext {
+  font-family: "Schibsted Grotesk", sans-serif;
+  color: black;
+  font-size: 3vh;
+  text-align: left;
+  margin-bottom: 1vh;
+}
+
+.estext {
+  margin-left: auto;
+  margin-right: 0;
+  font-family: "vendetta", serif;
+  color: red;
+  font-size: 4vh;
+  text-align: right;
+}
+
+.textcontainer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.stanza {
+  width: 100%;
+}
+
+.linepair {
+  border-radius: 5vh;
+  top: inherit;
+  display: block;
+  padding: 4% 5% 4%;
+}
+
+.poem-container {
+  max-width: 1200px;
+}
+
+.active-line {
+  border: 0.25vh solid rgb(255, 51, 0);
+}
+
+@media only screen and (max-width: 767px) {
+  .mobiline {
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #entext {
+    margin-left: 20vw;
+  }
+  #estext {
+    margin-right: 20vw;
+  }
+}/*# sourceMappingURL=war.css.map */
