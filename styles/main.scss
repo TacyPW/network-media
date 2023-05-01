@@ -43,19 +43,20 @@ h1 {
 h2 {
     color: blueviolet;
 }
-
+ 
 
 /*#endregion*/
 /*#region iframes */
 iframe {
     border: none;
+    position: absolute;
 }
 .fullframe {
     position: absolute; 
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
+    left: 0; 
+    top: 0; 
 }
 /*#endregion*/
 
