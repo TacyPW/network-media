@@ -24,7 +24,7 @@
 
 .overlay, #info-open, #menu-open {
   display: block;
-  background-color: blue;
+  background-color: lightgray;
   opacity: 90%;
   z-index: 1;
   position: fixed;
