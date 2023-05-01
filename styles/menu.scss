@@ -59,6 +59,29 @@
         bottom: 1vh;
     }
 
+    .prev {
+        @extend .btn;
+        background-image: url(../assets/arrow.left.svg);
+    }
+    .next {
+        @extend .btn;
+        background-image: url(../assets/arrow.right.svg);
+    }
+    .nextisl {
+        @extend .island;
+        display: block;
+        right: 1vh;
+        top: 50%;
+    }
+    .previsl {
+        @extend .island;
+        display: block;
+        left: 1vh;
+        bottom: 50%;
+    }
+
+    
+
     /*#region nav */
     #menu-closed {
         @extend .island;

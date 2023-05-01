@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500&display=swap");
 @import url("https://use.typekit.net/vbd4dyq.css");
 /*#region menus */
-.island, #info-closed, #menu-closed, .infoclose, .navclose {
+.island, #info-closed, #menu-closed, .previsl, .nextisl, .infoclose, .navclose {
   display: block;
   background-color: rgba(255, 255, 255, 0.6980392157);
   transition: background-color 0.5s ease-in;
@@ -17,7 +17,7 @@
   border-radius: 3vh;
 }
 
-.island:hover, #info-closed:hover, #menu-closed:hover, .infoclose:hover, .navclose:hover {
+.island:hover, #info-closed:hover, #menu-closed:hover, .previsl:hover, .nextisl:hover, .infoclose:hover, .navclose:hover {
   background-color: rgba(255, 255, 255, 0.8980392157);
   transition: background-color 0.5s ease-in;
 }
@@ -31,7 +31,7 @@
   overflow: hidden;
 }
 
-.btn, .closebtn, .infobtn, .navbtn {
+.btn, .next, .prev, .closebtn, .infobtn, .navbtn {
   background-position: center center;
   background-size: 60% 60%;
   background-repeat: no-repeat;
@@ -62,6 +62,26 @@
   display: block;
   left: 1vh;
   bottom: 1vh;
+}
+
+.prev {
+  background-image: url(../assets/arrow.left.svg);
+}
+
+.next {
+  background-image: url(../assets/arrow.right.svg);
+}
+
+.nextisl {
+  display: block;
+  right: 1vh;
+  top: 50%;
+}
+
+.previsl {
+  display: block;
+  left: 1vh;
+  bottom: 50%;
 }
 
 /*#region nav */
@@ -197,6 +217,14 @@ body {
 .figure {
   position: absolute;
   transform: translate(0, 5vw);
+}
+
+.prev {
+  background-image: url(../assets/arrow.left.svg);
+}
+
+.next {
+  background-image: url(../assets/arrow.right.svg);
 }
 
 @media only screen and (max-width: 767px) {
