@@ -23,7 +23,12 @@
         let infohead = $("<h3 id=\"information\" class=\"grid-70 mobile-grid-100\"></h3><br class=\"clear\"").text(this.en);
         let infobody = $("<p id=\"infohead\" class=\"grid-70 mobile-grid-100\"></p>").text(this.en);
         $(infohead).append(jsonData.infohead);
-        $(infobody).append(jsonData.information);
+        if (jsonData.information === "0") {
+            $(infobody).load(jsonData.infodoc);
+        } else {
+            $(infobody).append(jsonData.information);
+        }
+        
 
         $("#info-content").append(infohead);
         $("#info-content").append(infobody);
