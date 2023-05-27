@@ -23,7 +23,7 @@
         opacity: 90%;
         z-index: 1;
         position: fixed;
-        overflow: hidden;
+        overflow: scroll;
     }
     .btn {
         background-position: center center;
@@ -31,7 +31,7 @@
         background-repeat: no-repeat;
         width: 10vh;
         height: 10vh;
-        position: absolute;
+        position: fixed;
     }
     .navbtn {
         @extend .btn;
