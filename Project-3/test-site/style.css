@@ -7,9 +7,10 @@
 
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: #333333;
     background-color: #ffffff;
+    padding-bottom: 40px;
 }
 
 header {
@@ -333,9 +334,7 @@ a:hover {
     color: red;
 }
 
-/*#endregion*/
 
-/*#region product grid */
 
 /* Styles for the product grid layout */
 .product-grid {
@@ -513,3 +512,148 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+.card-style .section {
+    background-color: #555;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-style .section img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.card-style .section h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-style .section p {
+    color: #555;
+    font-size: 14px;
+}
+
+.card-style .section:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Target is for Everyone - Page Styles */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2, p {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Section Styles */
+  .hero {
+    background-color: #f5f5f5;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .feature {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .about {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* Card-like Style */
+  .card-style {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  
+
+  /* Our Team Section Styles */
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .team-member {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .team-member img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .team-member p {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 10px;
+  }
+  
+  .team-member .social-links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .team-member .social-link {
+    color: #777777;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .team-member .social-link:hover {
+    color: #cc0000;
+  }
+  
+  @media (max-width: 768px) {
+    .team-member {
+      width: 100%;
+    }
+  }
+
+  body {
+    padding-bottom: 50px;
+}
+  
