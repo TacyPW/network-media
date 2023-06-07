@@ -3,110 +3,110 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Global styles */
-  body {
+}
+
+/* Global styles */
+body {
     font-family: Arial, sans-serif;
     color: #333333;
-    background-color: #FFFFFF;
-  }
-  
-  header {
-    background-color: #CC0000;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #cc0000;
     padding: 20px;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
-  }
-  
-  nav ul li a {
-    color: #FFFFFF;
+}
+
+nav ul li a {
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-  }
-  
-  main {
+}
+
+main {
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 36px;
-    color: #CC0000;
+    color: #cc0000;
     margin-bottom: 10px;
-  }
-  
-  .hero p {
+}
+
+.hero p {
     font-size: 18px;
     margin-bottom: 20px;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     display: inline-block;
-    background-color: #CC0000;
-    color: #FFFFFF;
+    background-color: #cc0000;
+    color: #ffffff;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-  }
-  
-  .feature h2 {
+}
+
+.feature h2 {
     font-size: 24px;
     margin-bottom: 10px;
-  }
-  
-  .about h2 {
+}
+
+.about h2 {
     font-size: 24px;
     margin-bottom: 10px;
-  }
-  
-  .about p {
+}
+
+.about p {
     margin-bottom: 20px;
-  }
-  
-  .products {
+}
+
+.products {
     margin-top: 30px;
-  }
-  
-  .product-card {
-    background-color: #EDEDED;
+}
+
+.product-card {
+    background-color: #ededed;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
-  }
-  
-  .product-card img {
+}
+
+.product-card img {
     width: 100%;
     margin-bottom: 10px;
-  }
-  
-  .product-card h3 {
+}
+
+.product-card h3 {
     font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .product-card p {
+}
+
+.product-card p {
     font-size: 16px;
-  }
-  
-  footer {
+}
+
+footer {
     background-color: #333333;
     padding: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
     font-size: 14px;
-  }
+}
 
-  /* Add this CSS for the hamburger menu */
+/* Update the CSS to position the hamburger menu on the right */
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end; /* Align items to the right */
   }
   
   .hamburger {
@@ -126,7 +126,7 @@
   .line {
     width: 100%;
     height: 3px;
-    background-color: #000;
+    background-color: #fff;
     margin: 2px 0;
     transition: background-color 0.3s ease-in-out;
   }
@@ -142,7 +142,7 @@
   .menu ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-right: 20px;
   }
   
   .menu ul li {
@@ -151,7 +151,7 @@
   
   .menu ul li a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
   }
   
   /* Additional styles for responsiveness */
@@ -172,5 +172,15 @@
     }
   }
 
+
+/*#region adding logo */
+.logo {
+    margin-right: auto; /* Pushes the logo to the left */
+  }
   
+  .logo img {
+    width: 50px; /* Adjust the width of the logo as needed */
+  }
+  
+/*#endregion*/
   
