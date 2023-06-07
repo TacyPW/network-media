@@ -59,6 +59,15 @@
     margin-bottom: 10px;
   }
   
+  .about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about p {
+    margin-bottom: 20px;
+  }
+  
   .products {
     margin-top: 30px;
   }
@@ -91,4 +100,3 @@
     text-align: center;
     font-size: 14px;
   }
-  
