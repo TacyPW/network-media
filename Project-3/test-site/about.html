@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(function() {
-      $("#header").load("header.html");
-      $("#main").load("main-about.html");
-      $("#footer").load("footer.html");
-    });
-  </script>
-</head>
-<body>
-  <div id="header"></div>
-  <div id="main"></div>
-  <div id="footer"></div>
-  
-  <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Target is for Everyone</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://assets.targetimg1.com" rel="preconnect" />
+        <link href="https://target.scene7.com" rel="preconnect" />
+        <link
+            href="https://assets.targetimg1.com/static/images/favicon.ico"
+            id="favicon"
+            rel="icon"
+            type="image/png"
+        />
+        <link
+            href="https://assets.targetimg1.com/static/images/apple-touch-icon-precomposed.png"
+            rel="apple-touch-icon"
+        />
+        <link
+            href="https://assets.targetimg1.com/static/images/apple-touch-icon-precomposed.png"
+            rel="icon"
+            sizes="192x192"
+            type="image/png"
+        />
+        <link
+            href="https://assets.targetimg1.com/static/images/favicon-96x96.png"
+            rel="icon"
+            sizes="96x96"
+            type="image/png"
+        />
+        <link
+            href="https://assets.targetimg1.com/static/images/favicon-32x32.png"
+            rel="icon"
+            sizes="32x32"
+            type="image/png"
+        />
+        <link
+            href="https://assets.targetimg1.com/static/images/favicon-16x16.png"
+            rel="icon"
+            sizes="16x16"
+            type="image/png"
+        />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function () {
+                $("#header").load("header.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div id="main"></div>
+        <div id="footer"></div>
+
+        <script src="script.js"></script>
+        <script>
+            $(function () {
+                $("#main").load("main-about.html");
+            });
+        </script>
+    </body>
 </html>
