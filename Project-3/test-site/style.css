@@ -183,4 +183,26 @@ footer {
   }
   
 /*#endregion*/
+
+/*#region position logo at bottom */
+/* Update the CSS to position the footer at the bottom of the page */
+
+footer {
+    background-color: #cc0000;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Additional styles for responsiveness */
+  
+  @media (max-height: 600px) {
+    footer {
+      position: static;
+    }
+  }
+/*#endregion*/
   
